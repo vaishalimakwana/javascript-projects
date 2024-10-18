@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quizz App</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background: #a1a0dd;
+	padding: 20px;
+	font-family: 'Helvetica';
+	color: #4a3939;
+}
+header {
+	font-size: 30px;
+	text-align: center;
+}
+.app {
+	width: 50%;
+	margin: 2% auto 5%;
+	background: #ffffff;
+	padding: 40px;
+	box-shadow: 0 0 3px #857b7b;
+	border-radius: 20px;
+}
+h2#questions {
+	margin: 0 auto 5%;
+}
+button {
+	background: none;
+	border: none;
+	font-size: 16px;
+	font-weigt: bold;
+	display: block;
+	cursor: pointer;
+}
+.btn {
+	text-align: center;
+	padding: 2%;
+	border: 1px solid #000;
+	margin: 0 auto 3%;
+	width: 100%;
+}
+button.btn:hover:not([disabled]) {
+	background: #000;
+	color: #fff;
+}
+.btn:disabled {
+	cursor: no-drop;
+}
+#nextBtn {
+	background: #4c6a3f;
+	width: 20%;
+	color: #fff;
+	border-radius: 5px;
+	padding: 2%;
+	margin: 0 auto 3%;
+	position: relative;
+	box-shadow: 0 2px 5px #888;
+}
+button#nextBtn:hover {
+	bottom: 2px;
+}
+.correct {
+	background: #9aeabc;
+}
+.incorrect {
+	background: #ff9393;
+}
+</style>
+</head>
+<body>
+<header>Welcome to the Quiz App - Test your knowledge </header>
+<section class="app">
+  <h2 id="questions">Question</h2>
+  <div id="ansBtn">
+    <button class="btn">A</button>
+    <button class="btn">A</button>
+    <button class="btn">A</button>
+    <button class="btn">A</button>
+  </div>
+  <button id="nextBtn">Next</button>
+</section>
+<script>
+	  const questions = [
+      {
+        question: "What is the capital of India?",
+        answer: [
+          {text:"Mumbai", correct:false},
+          {text:"Delhi", correct:true},
+          {text:"Chennai", correct:false},
+          {text:"Kolkata", correct:false},
+        ]   
+      },
+       {
+        question: "Which planet is known as the Red Planet?",
+        answer: [
+          {text:"Mars", correct:true},
+          {text:"Venus", correct:false},
+          {text:"Jupiter", correct:false},
+          {text:"Saturn", correct:false},
+        ]
+      }, 
+       {
+        question: "Which country is home to the iconic Taj Mahal?",
+        answer: [
+          {text:"Egypt", correct:false},
+          {text:"Iran", correct:false},
+          {text:"Morocco", correct:false},
+          {text:"India", correct:true},
+        ]
+      },  
+        {
+        question: "What is the largest ocean in the world?",
+        answer: [
+          {text:"Atlantic", correct:false},
+          {text:"Indian", correct:false},
+          {text:"Pacific", correct:true},
+          {text:"Artic", correct:false},
+        ]
+      },
+        {
+        question: "Which animal is the fastest land animal?",
+        answer: [
+          {text:"Lion", correct:false},
+          {text:"Tiger", correct:false},
+          {text:"Elephant", correct:false},
+          {text:"Cheetah", correct:true},
+        ]
+      }   
+];
+
+const questionElement = document.getElementById('questions');
+const answerElement = document.getElementById('ansBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function launchQuiz(){
+  currentQuestionIndex = 0;
+  score = 0;
+  nextBtn.innerHTML = "Next";
+  showQuestion();
+}
+function showQuestion() { 
+  resetState();
+  let currentQuestion = questions[currentQuestionIndex];
+  let questionNo = currentQuestionIndex + 1;
+  questionElement.innerHTML = questionNo + '. ' + currentQuestion.question;
+  
+  currentQuestion.answer.forEach(answer => {
+    const button = document.createElement('button');
+    button.innerHTML = answer.text;
+    button.classList.add('btn');
+    answerElement.appendChild(button);
+	if(answer.correct){
+		button.dataset.correct = answer.correct;
+	}  
+	button.addEventListener('click',selectAnswer);
+    });                              
+                                  
+ }
+function resetState(){
+	nextBtn.style.display = "none";
+	while(answerElement.firstChild){
+		answerElement.removeChild(answerElement.firstChild);
+	}
+}
+function selectAnswer(e){
+	const selectedBtn = e.target;
+	const isCorrect = selectedBtn.dataset.correct === 'true';
+	if(isCorrect){
+		selectedBtn.classList.add("correct");
+		score++;
+	}
+	else{
+		selectedBtn.classList.add("incorrect");
+	}
+	Array.from(answerElement.children).forEach(button => {
+		if(button.dataset.correct === 'true'){
+			button.classList.add('correct');
+		}
+		button.disabled = true;
+	})
+	nextBtn.style.display = "block";
+}	
+function showScore(){
+	resetState();
+	questionElement.innerHTML =  `Your score is ${score} out of ${questions.length}!`;
+	nextBtn.innerHTML = "Play Again!";
+	nextBtn.style.display = "block";
+}
+function handleNextButton(){
+	currentQuestionIndex++;
+	if(currentQuestionIndex < questions.length){
+		showQuestion();
+	}
+	else{
+		showScore();
+	}
+}
+nextBtn.addEventListener('click',() =>{
+	if(currentQuestionIndex < questions.length){
+		handleNextButton();
+	}
+	else{
+		launchQuiz();
+	}
+})		 
+launchQuiz();                                  
+  
+ 
+	 </script>
+</body>
+</html>
 
