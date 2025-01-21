@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Element onclick</title>
+</head>
+
+<body>
+<h1 id="elementonclick">Hey There !!!</h1>
+</body>
+<script>
+    const arr = ["John", "Nick", "Harry" , "Sam"];
+const changeValue = document.getElementById("elementonclick");
+let counter = 0;
+changeValue.onclick = () => {
+
+  console.log("Outer:", counter);
+if(counter < arr.length){
+
+changeValue.innerHTML = arr[counter];
+  console.log("Inner",arr[counter]);
+   counter ++;
+}
+else{
+ changeValue.innerHTML = "DONE";
+}
+
+};
+</script>
+</html>
