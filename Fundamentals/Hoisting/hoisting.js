@@ -1,11 +1,11 @@
 // #Problem 1
-// console.log(a);  
-// var a = 10;
-// function test() {
-//     console.log(b);
-//     var b = 20;
-// }
-// test();
+console.log(a);  
+var a = 10;
+function test() {
+    console.log(b);
+    var b = 20;
+}
+test();
 
 
 // #Problem 2
