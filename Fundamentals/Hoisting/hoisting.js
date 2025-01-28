@@ -32,10 +32,10 @@ function foo() {
 console.log(foo);
 
 // #Problem4
-// console.log(x);
-// let x = 10;
-// console.log(y);
-// const y = 20;
+console.log(x);
+let x = 10;
+console.log(y);
+const y = 20;
 
 // #Problem5
 
