@@ -1,15 +1,15 @@
 // # 1: Scope of var, let, and const
-// function test() {
-//     if (true) {
-//         var x = 10;
-//         let y = 20;
-//         const z = 30;
-//     }
-//     console.log(x);
-//     console.log(y);
-//     console.log(z);
-// }
-// test();
+function test() {
+    if (true) {
+        var x = 10;
+        let y = 20;
+        const z = 30;
+    }
+    console.log(x);
+    console.log(y);
+    console.log(z);
+}
+test();
 
 // #2: Re-assigning values using var, let, and const
 var a = 1;
@@ -45,6 +45,7 @@ console.log(a); // What will this log?
 console.log(b); // What will this log?
 
 // #4: Answer 
+// 1
 // 2
 // ReferenceError: a is not defined
 // ReferenceError: b is not defined
