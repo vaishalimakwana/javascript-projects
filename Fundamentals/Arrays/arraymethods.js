@@ -75,4 +75,4 @@ console.log('Array 2', arr2); // Output:  ["Bill", "Harry Gone", "Nick Gone"]
 console.log('Array 3', arr3); // Output: [ "Harry", "Nick"]
 
 }
-Block7();
+Block7(); // 🚀 Use splice() when you need to modify the array and slice() when you need a copy
