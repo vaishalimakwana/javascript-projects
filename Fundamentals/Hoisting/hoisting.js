@@ -1,11 +1,11 @@
 // #Problem 1
-// console.log(a);  
-// var a = 10;
-// function test() {
-//     console.log(b);
-//     var b = 20;
-// }
-// test();
+console.log(a);  
+var a = 10;
+function test() {
+    console.log(b);
+    var b = 20;
+}
+test();
 
 
 // #Problem 2
@@ -32,10 +32,10 @@ function foo() {
 console.log(foo);
 
 // #Problem4
-// console.log(x);
-// let x = 10;
-// console.log(y);
-// const y = 20;
+console.log(x);
+let x = 10;
+console.log(y);
+const y = 20;
 
 // #Problem5
 

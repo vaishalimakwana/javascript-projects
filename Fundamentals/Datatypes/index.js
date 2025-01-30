@@ -76,3 +76,24 @@ let y = 10;
 console.log(x + y);  // What will this log? // '5' (string) is concatenated with 10 (number), so result is '510'
 console.log(Number(x) + y); // What will this log? // Number(x) converts '5' to 5, and then adds it to 10
 console.log(+x + y);  // What will this log?  // +x is shorthand for Number(x), which converts '5' to 5, and adds it to 10
+
+// #Problem 7: String Coercion
+console.log(1 + "2");          // "12" (Number coerced to String)
+console.log(true + " is true"); // "true is true" (Boolean coerced to String)
+console.log([1, 2] + "3");     // "1,23" (Array coerced to String)
+console.log(null + " is null"); // "null is null" (Null coerced to String)
+
+// #Problem 8: Number Coercion
+console.log("5" - 1);          // 4 (String coerced to Number)
+console.log(true + 2);         // 3 (Boolean coerced to Number: true = 1)
+console.log(null + 3);         // 3 (Null coerced to 0)
+console.log("text" * 3);       // NaN (Invalid String coerced to NaN)
+console.log([] - 1);           // -1 (Empty array coerced to 0)
+console.log([1, 2] - 1);       // NaN (Array coerced to NaN)
+
+// #Problem 9: Boolean Coercion
+console.log(Boolean(0));        // false (0 is falsy)
+console.log(Boolean("Hello"));  // true (Non-empty string is truthy)
+console.log(Boolean(null));     // false (Null is falsy)
+console.log(Boolean({}));       // true (Empty object is truthy)
+console.log(!"");               // true (Negated empty string is truthy)
