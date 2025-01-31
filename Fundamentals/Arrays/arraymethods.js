@@ -1,3 +1,4 @@
+// Removes last element in an Array
 function Block1(){
 const arr = ['Tom', 'Bill', 'Harry', 'Nick'];
 const arr2 = arr;  // Assigning arr2 to arr (not copying, but referencing the same array)
@@ -7,6 +8,7 @@ console.log('Array 1', arr);  // Output: ['Tom', 'Bill', 'Harry']
 console.log('Array 2', arr2); // Output: ['Tom', 'Bill', 'Harry']
 }
 Block1();
+// Add last element in an array
 function Block2(){
 const arr = ['Tom', 'Bill', 'Harry', 'Nick'];
 const arr2 = arr;  // Assigning arr2 to arr (not copying, but referencing the same array)
@@ -16,6 +18,8 @@ console.log('Array 1', arr);  // Output: ['Tom', 'Bill', 'Harry', 'Nick', 'Jack'
 console.log('Array 2', arr2); // Output: ['Tom', 'Bill', 'Harry', 'Nick', 'Jack']
 }
 Block2();
+
+// Remove first element of an array
 function Block3(){
 const arr = ['Tom', 'Bill', 'Harry', 'Nick'];
 const arr2 = arr;  // Assigning arr2 to arr (not copying, but referencing the same array)
@@ -26,6 +30,7 @@ console.log('Array 2', arr2); // Output: ['Bill', 'Harry', 'Nick', 'Jack']
 }
 Block3();
 
+// Creates a reference of the same Array
 function Block4(){
 const arr = ['Tom', 'Bill', 'Harry', 'Nick'];
 const arr2 = [...arr];  // Assigning arr2 to arr (not copying, but referencing the same array)
@@ -36,6 +41,7 @@ console.log('Array 2', arr2); // Output:  'Bill', 'Harry', 'Nick']
 }
 Block4();
 
+// References the Array // Add element in the beginning of an Array
 function Block5(){
 const arr = ['Tom', 'Bill', 'Harry', 'Nick'];
 const arr2 = [...arr];  // Assigning arr2 to arr (not copying, but referencing the same array)
@@ -46,6 +52,7 @@ console.log('Array 2', arr2); // Output: ["Adam", "Tom", "Bill", "Harry", "Nick"
 }
 Block5();
 
+// Creates a shallow copy of the portion without modifying the previous Array
 function Block6(){
 const arr = ['Tom', 'Bill', 'Harry', 'Nick'];
 const arr2 = arr.slice(1,3); // Returns a Shallow Copy y of a portion of an
@@ -63,7 +70,7 @@ console.log('Array 4', arr4); // Output:  'Bill', 'Harry','Jack']
 }
 Block6();
 
-//  with Primitive Values (No Issues)
+//  Splice removes and modifies the Array // with Primitive Values (No Issues)
 function Block7(){
 const arr = ['Tom', 'Bill', 'Harry', 'Nick'];
 const arr2 = arr.splice(1,3); // removes elements in array

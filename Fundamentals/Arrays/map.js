@@ -14,7 +14,7 @@ const users = [
   
   console.log(changeArr);  
 
-  let arr = [3,4,5,6];
+  // let arr = [3,4,5,6];
 
 // let changeArr = arr.map(function (element){
 //   return element * 3
