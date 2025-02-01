@@ -83,3 +83,14 @@ console.log('Array 3', arr3); // Output: [ "Harry", "Nick"]
 
 }
 Block7(); // 🚀 Use splice() when you need to modify the array and slice() when you need a copy
+
+// Change String to an Array:
+const string = "Hello World";
+
+const changeArray = Array.from(string);
+
+console.log(changeArray);
+
+changeArray.splice(5,1); // This will remove the space after it becomes and Array
+
+console.log(changeArray);

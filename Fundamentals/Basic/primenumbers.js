@@ -1,3 +1,4 @@
+// any number divisible by 1 or itself is a prime number
 function checkPrime(num) {
     if (num <= 1) {
         console.log(num, "is not a Prime Number");
