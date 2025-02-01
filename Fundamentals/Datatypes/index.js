@@ -97,3 +97,13 @@ console.log(Boolean("Hello"));  // true (Non-empty string is truthy)
 console.log(Boolean(null));     // false (Null is falsy)
 console.log(Boolean({}));       // true (Empty object is truthy)
 console.log(!"");               // true (Negated empty string is truthy)
+
+// #Problem 10:
+console.log(1 + "2" + "2"); // 122
+console.log(1 + +"2" + "2"); // 32
+console.log(1 + -"1" + "2"); // 02
+console.log(+"1" + "1" + "2"); // 112
+console.log(+"1" - "1" + "2"); // 02
+console.log("A" - "B" + "2"); // NaN2
+console.log("A" + "B" + "2"); // AB2
+console.log("A" - "B" + 2); // NaN
