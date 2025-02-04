@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head><title>To-Do List</title></head>
+<body>
+<style>
+    body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    font: 16px 'Arial', 'Helvetica', sans-serif;
+    }
+    .container{width: 100%; margin:0 auto; display: flex;justify-content: center;}
+    input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #004085;
+}
+ul {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    margin: 5% auto;
+    text-transform: capitalize;
+}
+
+li:hover {
+    background-color: #e2e2e2; /* Light gray on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+    .strike-off{text-decoration:line-through};
+</style>
+<div class="container">
+<div class="To-Do-App">
+    <input type="text" placeholder="task to-do" id="input-box"/>
+    <button id="btn-click">
+     Submit
+    </button>
+    <button id="reset">
+    Reset
+    </button>
+</div> <!--To-Do-App ends here-->
+</div> <!--container ends here-->
+<script type='text/javascript' src="index.js"></script>
+</body>
+</html>
