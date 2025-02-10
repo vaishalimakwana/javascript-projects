@@ -33,7 +33,7 @@ Block3();
 // Creates a reference of the same Array
 function Block4(){
 const arr = ['Tom', 'Bill', 'Harry', 'Nick'];
-const arr2 = [...arr];  // Assigning arr2 to arr (not copying, but referencing the same array)
+const arr2 = [...arr];  // The ... (spread operator) creates a shallow copy, which means that arr2 is a new array with the same values, but it does not copy any nested objects or arrays within the original array. In your example, since arr contains simple string values, a shallow copy and a deep copy will behave the same. / Assigning arr2 to arr (not copying, but referencing the same array)
 arr2.shift();  // Removes the first element of arr2 Only
 
 console.log('Array 1', arr);  // Output: ['Tom', 'Bill', 'Harry', 'Nick']
@@ -82,7 +82,8 @@ console.log('Array 2', arr2); // Output:  ["Bill", "Harry Gone", "Nick Gone"]
 console.log('Array 3', arr3); // Output: [ "Harry", "Nick"]
 
 }
-Block7(); // 🚀 Use splice() when you need to modify the array and slice() when you need a copy
+Block7(); // 🚀 Use splice() when you need to modify the array 
+// and slice() when you need a copy
 
 // Change String to an Array:
 const string = "Hello World";
