@@ -25,3 +25,17 @@ function reverse(array) {
   }
   
   console.log(reverse([1, 2, 3, 4, 5, 6, 7]));
+
+  // 3
+  const arr = [1, 2, 3, 4, 5, 6, 7];
+const tempArr = [];
+const reversearr = () => {
+ 
+    while (arr.length > 0) {
+        tempArr.push(arr.pop());
+    }
+      arr.push(...tempArr); 
+};
+
+reversearr();
+console.log('Arr', arr);  // Output: [7, 6, 5, 4, 3, 2, 1]

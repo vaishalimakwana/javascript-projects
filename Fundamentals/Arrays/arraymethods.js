@@ -33,7 +33,12 @@ Block3();
 // Creates a reference of the same Array
 function Block4(){
 const arr = ['Tom', 'Bill', 'Harry', 'Nick'];
-const arr2 = [...arr];  // The ... (spread operator) creates a shallow copy, which means that arr2 is a new array with the same values, but it does not copy any nested objects or arrays within the original array. In your example, since arr contains simple string values, a shallow copy and a deep copy will behave the same. / Assigning arr2 to arr (not copying, but referencing the same array)
+const arr2 = [...arr];  // The ... (spread operator) creates a shallow copy, 
+// which means that arr2 is a new array with the same values, 
+// but it does not copy any nested objects or arrays within the original array. 
+// In your example, since arr contains simple string values, 
+// a shallow copy and a deep copy will behave the same. /
+//  Assigning arr2 to arr (not copying, but referencing the same array)
 arr2.shift();  // Removes the first element of arr2 Only
 
 console.log('Array 1', arr);  // Output: ['Tom', 'Bill', 'Harry', 'Nick']
@@ -55,7 +60,7 @@ Block5();
 // Creates a shallow copy of the portion without modifying the previous Array
 function Block6(){
 const arr = ['Tom', 'Bill', 'Harry', 'Nick'];
-const arr2 = arr.slice(1,3); // Returns a Shallow Copy y of a portion of an
+const arr2 = arr.slice(1,3); // Returns a Shallow Copy of a portion of an
 //array without modifying the original
 const arr3 = arr2.slice(); // Returns a separate copy
 
@@ -95,3 +100,5 @@ console.log(changeArray);
 changeArray.splice(5,1); // This will remove the space after it becomes and Array
 
 console.log(changeArray);
+
+

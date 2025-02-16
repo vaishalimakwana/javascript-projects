@@ -16,3 +16,10 @@ console.log(removeDuplicates([2,2,3,3,4,4,5,5]).reverse());
 const arr = [1,2,2,3,3,4,4,5,5];
 const findDups = arr.filter( (ele, index) => arr.indexOf(ele) !== index); 
 console.log(findDups);
+
+
+// Remove Duplicates
+const arr = [1,2,2,3,3,4,4,5,5];
+const findDups = arr.filter( (ele, index) => arr.indexOf(ele) === index); 
+console.log(findDups);
+

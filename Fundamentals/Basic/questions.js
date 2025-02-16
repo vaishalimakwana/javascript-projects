@@ -144,3 +144,11 @@ function test() {
 	}
 	}
 	test();
+
+// 15 Strings are immutable
+const str = "Jack";
+
+// Create a new string with 'M' at the first position
+const newStr = 'M' + str.slice(1);
+
+console.log(newStr);  // Output: "Mack"	
