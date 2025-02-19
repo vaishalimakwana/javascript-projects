@@ -152,3 +152,16 @@ const str = "Jack";
 const newStr = 'M' + str.slice(1);
 
 console.log(newStr);  // Output: "Mack"	
+
+// Convert arr to obj
+const arr = ['a','b','c'];
+
+let toobj = arr.reduce((acc,itr, i) => ({
+	...acc,[i]:itr})
+  ,{})
+  
+ let toobj1 = {...arr};
+console.log(toobj);
+console.log(toobj1);
+console.log(typeof(toobj));
+console.log(typeof(toobj1));
