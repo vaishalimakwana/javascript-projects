@@ -206,3 +206,14 @@ Promise.resolve().then(() => {
 });
 
 console.log('End');
+
+// 13
+var a = 10;
+function test() {
+ console.log('Above', a);
+  var a = 11;
+  console.log('inner a', a);
+}
+test();
+console.log(a);
+
