@@ -15,7 +15,7 @@ let participant1 = {
 
 let participant2 = {
 	name: 'John',
-  batter: 30
+  battery: 30
 
 }
 participant1.chargeBattery();
