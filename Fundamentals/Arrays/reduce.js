@@ -14,3 +14,12 @@ const emps = [
 // reduce() does not always have to return a single primitive value—it can return objects, arrays, or any accumulated structure.
 // In your string concatenation example, reduce() converts an array into a single string.
 // In the HR department example, reduce() groups elements into an object.
+
+// Find average of an arrary of numbers
+const numbers = [10,24,30];
+	
+// get average  - sum / 3
+	
+const getNumbers = numbers.reduce((acc,ind) => acc + ind / 3);
+
+console.log(getNumbers);

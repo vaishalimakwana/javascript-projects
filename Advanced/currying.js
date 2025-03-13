@@ -25,3 +25,21 @@ function add(a) {
   
   const double = curriedMultiply(2);
   console.log(double(5));  // Output: 10
+
+  // 3 currying and recursion
+  function sum(a) {
+
+    function inner(b){
+         return sum(a + b);
+   }
+   
+   inner.done = function() {
+   return a;
+   
+    }
+    return inner;
+   }
+   console.log(sum(3)(6));
+   console.log(sum(3)(6)(5)(2)(1).done());
+     //sum(3)(6) // output
+   //sum(3)(6)(5)(2)(1).done()
