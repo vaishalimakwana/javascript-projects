@@ -79,6 +79,7 @@ Block6();
 function Block7(){
 const arr = ['Tom', 'Bill', 'Harry', 'Nick'];
 const arr2 = arr.splice(1,3); // removes elements in array
+Start at index 1, remove 2 items, and insert 'Harry Gone', 'Nick Gone' in their place.
 const arr3 = arr2.splice(1,2, 'Harry Gone', 'Nick Gone')  //replaces elements in array
 
 
