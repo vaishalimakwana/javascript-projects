@@ -7,7 +7,7 @@ console.log(a.age); // b is assigned the same reference as a, so modifying b.age
 // #2
 var a = { name: 'UST', age: 17 };
 var b = { ...a }; // { ...a } creates a shallow copy of a, meaning b gets a separate copy.
-b.age = 18; // Modifying b.age does not affect a.age.
+b.age = 18; // Modifying b.age does not affect a.age. // meaning that if you have nested objects or arrays, the nested objects/arrays will still be references to the original objects/arrays, not copies. 
 console.log(a.age);
 
 // #3
